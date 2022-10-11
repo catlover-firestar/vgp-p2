@@ -4036,6 +4036,8 @@ GameObject:
   - component: {fileID: 4056341150668945529}
   - component: {fileID: 4056341149847052070}
   - component: {fileID: -2489567450933973505}
+  - component: {fileID: 1726892547408874108}
+  - component: {fileID: 660163111848659317}
   m_Layer: 0
   m_Name: Big Pupper (medium)
   m_TagString: Untagged
@@ -4138,6 +4140,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3bb888e24fee9a347aef04331f20c85d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1726892547408874108
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056341150678344009}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.098573, y: 0.20237425, z: 0.2751461}
+  m_Center: {x: -0.00031585, y: 0.10480125, z: 0.02701668}
+--- !u!114 &660163111848659317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056341150678344009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca8f2db5edc53942b433434a63615ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4056341150678347041

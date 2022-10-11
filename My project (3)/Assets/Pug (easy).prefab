@@ -5616,6 +5616,8 @@ GameObject:
   - component: {fileID: 394075811570632256}
   - component: {fileID: 394075812053541436}
   - component: {fileID: 519989791412147175}
+  - component: {fileID: 915374831768936991}
+  - component: {fileID: 2652896528111106078}
   m_Layer: 0
   m_Name: Pug (easy)
   m_TagString: Untagged
@@ -5718,6 +5720,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3bb888e24fee9a347aef04331f20c85d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &915374831768936991
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394075811578047374}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.101949595, y: 0.20716928, z: 0.26328203}
+  m_Center: {x: 0.002895689, y: 0.08923983, z: 0.02520026}
+--- !u!114 &2652896528111106078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394075811578047374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca8f2db5edc53942b433434a63615ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &394075811578048220
