@@ -296,5 +296,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  rotationSpeed: 0
+  rotationSpeed: 10
   verticalInput: 0

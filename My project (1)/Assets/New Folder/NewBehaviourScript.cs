@@ -10,7 +10,7 @@ public class NewBehaviourScript : MonoBehaviour
         
     }
     // Update is called once per frame
-    public float speed = 20f;
+    public float speed = 20f`;
     public float turnSpeed = 45f; 
     public float horizontalInput;
     public float forwardInput;

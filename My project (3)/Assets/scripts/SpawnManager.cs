@@ -6,7 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
     // Start is called before the first frame update
     private float startDelay = 2;
-    private float spawnInterval = 1.5f;
+    private float spawnInterval = 5f;
     void Start()
     {
         InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
