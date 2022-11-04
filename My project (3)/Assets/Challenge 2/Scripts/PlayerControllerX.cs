@@ -10,7 +10,7 @@ public class PlayerControllerX : MonoBehaviour
     void Update()
     {
         // On spacebar press, send dog
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             Instantiate(dogPrefab, transform.position, dogPrefab.transform.rotation);
         }
