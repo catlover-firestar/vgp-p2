@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
             playerAnim.SetTrigger("Jump_trig");
             dirtParticle.Stop();
             playerAudio.PlayOneShot(jumpSound, 1.0f);}
-        if (Input.GetKeyDown(KeyCode.Space) && !isOnGround && doubleJump && !gameOver){
+        else if (Input.GetKeyDown(KeyCode.Space) && !isOnGround && doubleJump && !gameOver){
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             doubleJump = false;
             playerAnim.SetTrigger("Jump_trig");
