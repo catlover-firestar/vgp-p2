@@ -317,9 +317,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 834bc99524a174a378e982623582c06d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b2e02a8e8e9dd184998104e0c48db83f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -363,7 +363,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -393,7 +393,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 1.1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -915,14 +915,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c590f96a8fc6c8840954f7f86aede891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 8
+  jumpForce: 10
   gravityModifier: 2
   isOnGround: 1
+  doubleJump: 1
   gameOver: 0
   explosionParticle: {fileID: 1892454476}
   dirtParticle: {fileID: 480285611}
-  jumpSound: {fileID: 8300000, guid: 08ab7053d586c458db3774d33c141a4b, type: 3}
-  crashSound: {fileID: 8300000, guid: 4bcde6de2166e41e284ec46d8a01fb90, type: 3}
+  jumpSound: {fileID: 8300000, guid: b2e02a8e8e9dd184998104e0c48db83f, type: 3}
+  crashSound: {fileID: 8300000, guid: b2e02a8e8e9dd184998104e0c48db83f, type: 3}
 --- !u!4 &2079425551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400046, guid: f8abbdd178867d2419ba9feb6ff2cba0, type: 3}
