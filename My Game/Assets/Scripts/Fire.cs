@@ -2,25 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackPlayer : MonoBehaviour
+public class Fire : MonoBehaviour
 {
-    private float speed = 2.5f;
-    private GameObject player;
+    private float speed = 1000;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        transform.Translate((player.transform.position - transform.position).normalized * Time.deltaTime * speed);
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
     void OnTiggerEnter(Collider other)
     {
-        if (other.CompareTag("Projectile"));
         Destroy(gameObject);
     }
 }
