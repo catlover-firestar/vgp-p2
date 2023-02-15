@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Fire : MonoBehaviour
 {
-    private float speed = 1000;
+    private float speed = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +16,16 @@ public class Fire : MonoBehaviour
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
-    void OnTiggerEnter(Collider other)
+    void OnCollisionEnter(Collision other)
     {
+        if (gameObject.CompareTag("Wall"))
+        {
         Destroy(gameObject);
+        }
+        else if (gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }
     }
 }
