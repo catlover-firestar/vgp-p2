@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackPlayer : MonoBehaviour
 {
-    private float speed = 2.5f;
+    public float speed = 2.5f;
     private GameObject player;
     // Start is called before the first frame update
     void Start()
@@ -18,9 +18,5 @@ public class AttackPlayer : MonoBehaviour
 
         transform.Translate((player.transform.position - transform.position).normalized * Time.deltaTime * speed);
     }
-    void OnTiggerEnter(Collider other)
-    {
-        if (other.CompareTag("Projectile"));
-        Destroy(gameObject);
-    }
+
 }

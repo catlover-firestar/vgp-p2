@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float horizontalInput;
-    private float verticalInput;
+    public float horizontalInput;
+    public float verticalInput;
     private float speed = 5;
-    private float turnSpeed = 2;
+    private float turnSpeed = 5;
     public GameObject projectile;
     // Start is called before the first frame update
     void Start()
@@ -20,10 +20,10 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput); 
-        transform.Rotate(Vector3.right * Time.deltaTime * turnSpeed * horizontalInput);
+        transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectile, transform.position, projectile.transform.rotation);
+            Instantiate(projectile, transform.position, transform.rotation);
         }
     }
 }

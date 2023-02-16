@@ -16,16 +16,16 @@ public class Fire : MonoBehaviour
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
-    void OnCollisionEnter(Collision other)
+    void OnCollisionEnter(Collision collision)
     {
-        if (gameObject.CompareTag("Wall"))
+        if (collision.gameObject.CompareTag("Wall"))
         {
         Destroy(gameObject);
         }
-        else if (gameObject.CompareTag("Enemy"))
+        else if (collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(gameObject);
-            Destroy(other.gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }
