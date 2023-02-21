@@ -30,7 +30,13 @@ public class PlayerController : MonoBehaviour
         {
             hasPowerup = true;
             Destroy(other.gameObject);
+            StartCoroutine(PowerupCountdown());
         }
+    }
+    IEnumerator PowerupCountdown()
+    {
+        yield return new WaitForSeconds(10);
+        hasPowerup = false;
     }
     void OnCollisionEnter(Collision collision)
     {
