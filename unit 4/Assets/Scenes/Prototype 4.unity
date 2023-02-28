@@ -176,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3371296939182004998, guid: d3b7fcb3499c225438b470f93f88d20c, type: 3}
       propertyPath: m_Name
-      value: RadiationIcon
+      value: Powerup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3b7fcb3499c225438b470f93f88d20c, type: 3}
