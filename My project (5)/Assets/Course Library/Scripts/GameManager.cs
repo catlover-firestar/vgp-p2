@@ -6,6 +6,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public List<GameObject> targets;
+    public TextMeshProUGUI gameOver;
     private float spawnRate = 1;
     private int score;
     public TextMeshProUGUI scoreText;
@@ -13,6 +14,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         score = 0;
+        gameOver.gameObject.SetActive(true);
         UpdateScore(0);
         StartCoroutine(SpawnTarget());
     }
