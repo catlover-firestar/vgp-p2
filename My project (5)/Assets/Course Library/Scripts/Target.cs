@@ -7,8 +7,8 @@ public class Target : MonoBehaviour
     private Rigidbody targetRb;
     private GameManager gameManager;
     public ParticleSystem explosionParticle;
-    private float minSpeed = 12;
-    private float maxSpeed = 16;
+    private float minSpeed = 14;
+    private float maxSpeed = 18;
     private float maxTorque = 10;
     private float xRange = 4;
     private float ySpawnPos = -6;
@@ -41,12 +41,19 @@ public class Target : MonoBehaviour
     }
     void OnMouseDown()
     {
-        Destroy(gameObject);
-        gameManager.UpdateScore(pointValue);
-        Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+        if (gameManager.isGameActive)
+        {
+            Destroy(gameObject);
+            gameManager.UpdateScore(pointValue);
+            Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+        }
     }
     void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
+        if (!gameObject.CompareTag("Bad"))
+        {
+            gameManager.GameOver();
+        }
     }
 }
