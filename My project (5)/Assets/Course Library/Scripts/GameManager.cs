@@ -14,13 +14,20 @@ public class GameManager : MonoBehaviour
     private int score;
     public TextMeshProUGUI scoreText;
     public bool isGameActive;
+    public GameObject titleScreen;
     // Start is called before the first frame update
-    void Start()
+    public void StartGame(int difficulty)
     {
+        spawnRate /= difficulty;
         isGameActive = true;
         score = 0;
         UpdateScore(0);
         StartCoroutine(SpawnTarget());
+        titleScreen.gameObject.SetActive(false);
+    }
+    void Start()
+    {
+        
     }
    public void GameOver()
     {
