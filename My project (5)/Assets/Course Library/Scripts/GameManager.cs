@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI livesText;
+    public GameObject pauseScreen;
+    private bool paused;
     public List<GameObject> targets;
     public Button restartButton;
     public TextMeshProUGUI gameOver;
@@ -27,6 +29,21 @@ public class GameManager : MonoBehaviour
         UpdateLives(3);
         StartCoroutine(SpawnTarget());
         titleScreen.gameObject.SetActive(false);
+    }
+    void ChangePaused()
+    {
+        if (!paused)
+        {
+            paused = true;
+            pauseScreen.SetActive(true);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            paused = false;
+            pauseScreen.SetActive(false);
+            Time.timeScale = 1;
+        }
     }
     void Start()
     {
@@ -52,7 +69,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            ChangePaused()
+        }
     }
     public void UpdateScore(int scoreToAdd)
     {
