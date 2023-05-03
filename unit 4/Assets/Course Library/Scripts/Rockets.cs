@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Rockets : MonoBehaviour
 {
+    private Transform target;
+    private float speed = 15;
+    private bool homing;
+    private float rocketStrength = 15;
+    private float aliveTime = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +19,11 @@ public class Rockets : MonoBehaviour
     void Update()
     {
         
+    }
+    public void Fire(Transform newTarget)
+    {
+        target = homingTarget;
+        homing = true;
+        Destroy(gameObject, aliveTime);
     }
 }
