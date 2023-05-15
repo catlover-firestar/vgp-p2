@@ -10,6 +10,10 @@ public class PlayerController : MonoBehaviour
     public bool hasPowerup;
     private float powerupStrength = 10;
     public GameObject powerupIndicator;
+    public PowerUpType currentPowerUp = PowerUpType.None;
+    public GameObject rocketPrefab;
+    private GameObject tmpRocket;
+    private Coroutine powerupCountdown;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +36,14 @@ public class PlayerController : MonoBehaviour
         {
             hasPowerup = true;
             Destroy(other.gameObject);
-            StartCoroutine(PowerupCountdown());
+            currentPowerUp = other.gameObject.GetComponent<PowerUp>().powerUpType;
             powerupIndicator.gameObject.SetActive(true);
+
+            if(powerupCountdown != null)
+            {
+                StopCoroutine(powerupCountdown);
+            }
+            powerupCountdown = StartCoroutine(PowerupCountdown());
         }
     }
     IEnumerator PowerupCountdown()
